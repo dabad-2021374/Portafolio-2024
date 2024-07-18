@@ -1,0 +1,365 @@
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Fuente principal */
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 76px);
+    /* Ocupa toda la altura de la pantalla */
+    width: 100%;
+    position: relative;
+    text-align: center;
+    /* Asegura que el texto esté centrado */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    z-index: 1;
+    flex-direction: row;
+    /* Dirección por defecto para pantallas grandes */
+}
+
+.about-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-image img {
+    width: 70%;
+    height: auto;
+    mask-image: linear-gradient(black 80%,
+            transparent);
+
+}
+
+.space-title {
+    margin-top: 1.5vh;
+}
+
+.space-objects {
+    margin-bottom: 5vh;
+}
+
+.about-text {
+    flex: 2;
+    padding: 20px;
+}
+
+.about-title {
+    font-family: 'Roboto', sans-serif;
+    /* Fuente de título */
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    color: #ff0000;
+    display: flex;
+    align-items: center;
+}
+
+ul li svg {
+    margin-right: 10px;
+    color: #ff0000;
+    /* Espacio entre el icono y el texto */
+}
+
+.highlight {
+    color: #ff4b4b;
+    /* Color rojo para resaltar */
+}
+
+.highlight-secondary {
+    color: #ffffff;
+    /* Color blanco para resaltar */
+}
+
+.about-subtitle {
+    font-family: 'Roboto', sans-serif;
+    /* Fuente de subtítulo */
+    font-size: 2rem;
+    margin: 10px 0;
+    color: #b3adad;
+}
+
+.about-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    margin: 20px 0;
+    line-height: 1.5;
+    color: #ababab;
+}
+
+.learn-more-button {
+    background-color: #ff4b4b;
+    color: white;
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.learn-more-button:hover {
+    background-color: #ffffff;
+    color: #ff4b4b;
+}
+
+.learn-more-button:active {
+    background-color: #ff6b6b !important;
+    outline: none;
+    box-shadow: none;
+}
+
+.knowledge-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.knowledge-column {
+    flex: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 10px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.knowledge-column li {
+    margin-bottom: 10px;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        /* Cambia la dirección a columna para pantallas pequeñas */
+    }
+
+    .about-image,
+    .about-text {
+        flex: none;
+        width: 100%;
+        /* Asegura que ambos elementos ocupen el 100% del ancho */
+        padding: 10px;
+        /* Ajusta el padding para pantallas pequeñas */
+    }
+
+    .about-title {
+        font-size: 2rem;
+        /* Ajusta el tamaño de fuente para pantallas pequeñas */
+    }
+
+    .about-subtitle {
+        font-size: 1.5rem;
+        /* Ajusta el tamaño de fuente para pantallas pequeñas */
+    }
+
+    .about-description {
+        font-size: 0.9rem;
+        /* Ajusta el tamaño de fuente para pantallas pequeñas */
+    }
+
+    .learn-more-button {
+        font-size: 0.9rem;
+        /* Ajusta el tamaño de fuente del botón para pantallas pequeñas */
+        padding: 8px 16px;
+        /* Ajusta el padding del botón para pantallas pequeñas */
+    }
+
+    .knowledge-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .knowledge-column {
+        margin: 0;
+    }
+}
+
+.modal-custom-content {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    background-color: #333;
+    border-radius: 10px;
+    overflow-y: auto;
+    height: 70vh;
+    width: 1050px;
+    margin: -135px;
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+}
+
+.modal-left {
+    flex: 2;
+    padding: 20px;
+    text-align: center;
+}
+
+.modal-left img {
+    width: 45%;
+    mask-image: linear-gradient(black 80%,
+            transparent);
+}
+
+.modal-right {
+    flex: 3;
+    padding: 20px;
+    overflow-y: auto;
+    /* Hacer que el contenido sea desplazable */
+}
+
+.modal-right::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-right::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+}
+
+.modal-right::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.modal-title {
+    font-size: 2rem;
+    color: #ff4b4b;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    color: #ccc;
+}
+
+.modal-right h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.modal-right p,
+.modal-right ul {
+    color: #ccc;
+}
+
+.skills-container {
+    margin-top: 20px;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill span {
+    display: block;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #555;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: #ff4b4b;
+    border-radius: 4px;
+}
+
+.skill-percentage {
+    display: block;
+    text-align: right;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.timeline {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.timeline h3 {
+    color: #ffffff;
+}
+
+.timeline-item {
+    position: relative;
+}
+
+.timeline-item-content {
+    background: #333;
+    padding: 2px;
+    border-radius: 8px;
+    color: #fff;
+    position: relative;
+    margin-left: 40px;
+}
+
+.timeline-item-content::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #ff4b4b;
+    border: 3px solid #333;
+    border-radius: 50%;
+    left: -40px;
+    top: 8px;
+}
+
+.timeline-item-content .tag {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff4b4b;
+}
+
+.timeline-item-content time {
+    display: block;
+    font-size: 0.9rem;
+    color: #b3adad;
+    margin-bottom: 20px;
+}
+
+.timeline-item-content p {
+    color: #ababab;
+}
