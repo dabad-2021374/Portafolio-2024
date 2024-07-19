@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './TaskCard.css'
+import './TaskCard.css';
 
 const Modal = ({ imageUrl, onClose }) => {
   return (
@@ -26,7 +26,7 @@ export const TaskCard = ({ titulo, descripcion, habilidades, link, imagenUrl }) 
         <strong>
           <p className="mb-1 color-text">Habilidades aprendidas:</p>
         </strong>
-        <p className="mb-1 color-text" > {habilidades}</p>
+        <p className="mb-1 color-text" >{habilidades}</p>
       </div>
       <a href={link} className="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">Descargar</a>
       {showModal && (
@@ -36,6 +36,5 @@ export const TaskCard = ({ titulo, descripcion, habilidades, link, imagenUrl }) 
         />
       )}
     </div>
-  )
+  );
 };
-

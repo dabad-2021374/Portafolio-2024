@@ -131,3 +131,39 @@ color-text {
   background-color: transparent;
   border-radius: 10px;
 }
+
+/* Estilos selected*/ 
+.sort-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 3vh;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #ff4b4b;
+}
+
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.sort-select {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: #ff4b4b;
+  font-size: 16px;
+  outline: none;
+  font-weight: bold;
+}
+
+.sort-select option {
+  background-color: #333;
+  color: #fff;
+}
+
+/*SPAM*/
+.highlight {
+  color: #ff4b4b;
+}
