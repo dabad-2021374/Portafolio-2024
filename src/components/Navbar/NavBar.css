@@ -18,7 +18,7 @@
   }
 
   .nav-link:hover {
-    color: #ff4b4b; /* Cambia este color según tus necesidades */
+    color: #ff4b4b;
 }
 
 .navbar-nav .nav-item {
@@ -27,5 +27,5 @@
 }
 
 .navbar-nav .nav-item:last-child {
-    margin-right: 0; /* Elimina el margen derecho del último elemento */
+    margin-right: 0; 
 }
