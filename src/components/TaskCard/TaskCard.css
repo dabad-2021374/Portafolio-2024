@@ -3,40 +3,56 @@
   margin: 20px;
   background-color: #161b22;
   display: flex;
-  justify-content: center;
-  padding-right: 5px;
-  padding-left: 5px;
-  border-radius: 100px;
+  flex-direction: column; /* Cambiado a columna para flexbox */
+  justify-content: space-between; /* Asegura que el contenido principal y el botón estén separados */
+  padding: 20px; /* Ajusta el padding si es necesario */
+  border-radius: 10px;
+  overflow: hidden; /* Asegura que el contenido no se salga */
 }
 
-.card-body {
-  color: #ffffff;
-}
-
-.buttons {
-  justify-content: center;
-  text-align: center;
-  margin-top: auto;
-}
-
-h3 {
-  text-align: center;
+.card-content {
+  flex-grow: 1; /* Permite que el contenido crezca y llene el espacio */
 }
 
 .imagenUrl {
-  width: auto;
-  height: 225px;
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
   object-fit: cover;
   cursor: pointer;
-  margin-top: 20px;
-  margin-bottom: 5px;
-  margin-right: 5px;
-  margin-left: 5px;
+  display: block;
 }
 
-.cont-img {
-  justify-content: center;
+.image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  text-align: center;
 }
 
 .color-text {
@@ -137,7 +153,6 @@ body,
   letter-spacing: 2px;
 }
 
-
 .w-full {
   width: 100%;
 }
@@ -212,9 +227,6 @@ body,
   border-bottom: 5px solid #2196fe;
 }
 
-
-
-
 .clearfix::before,
 .clearfix::after {
   content: "";
@@ -263,7 +275,6 @@ body,
   margin-left: 3rem;
   margin-right: 3rem;
 }
-
 
 .my-0 {
   margin-top: 0;
@@ -333,9 +344,6 @@ body,
   margin-left: 3rem;
 }
 
-
-
-
 .px-0 {
   padding-left: 0;
   padding-right: 0;
@@ -355,7 +363,6 @@ body,
   padding-left: 3rem;
   padding-right: 3rem;
 }
-
 
 .py-0 {
   padding-top: 0;

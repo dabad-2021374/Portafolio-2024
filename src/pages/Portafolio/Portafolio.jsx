@@ -121,7 +121,7 @@ export const Portafolio = () => {
       id: 11,
       titulo: 'ServD',
       imagenUrl: 'https://media.discordapp.net/attachments/1263302863581483128/1263674648768548958/ccfb005a-44e4-4226-81cc-4881eeb308a5.png?ex=669b183a&is=6699c6ba&hm=117de5bc6619ff4caa47626f3aca803811c82cfd98f77f5ad5610617bbb96d7f&=&format=webp&quality=lossless&width=1231&height=662',
-      descripcion: 'Proyecto en JavaSS para la gestión de cafetería del colegio',
+      descripcion: 'Proyecto en JavaSS para la gestión de una empresa de servicios',
       habilidades: 'Más conocimiento en JavaSE',
       link: 'https://github.com/dabad-2021374/ServD-2023.git',
       importancia: 'alta',
