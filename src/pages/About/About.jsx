@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { NavBar } from '../../components/Navbar/NavBar';
-import './About.css';
-import { FaUser, FaCalendarAlt, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaUser, FaCalendarAlt, FaPhone, FaEnvelope, FaMapMarkerAlt, FaTimes } from 'react-icons/fa';
 import yo from '../../../public/yo.png';
 import cv from '../../../public/Cv.jpg';
+import './About.css';
 
 export const About = () => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const handleBackdropClick = (e) => {
+        if (e.target === e.currentTarget) {
+            handleClose();
+        }
+    };
 
     const educationData = [
         {
@@ -51,7 +57,7 @@ export const About = () => {
                             Programador <span className="highlight-secondary">Jr</span>
                         </h2>
                         <p className="about-description">
-                            Mi nombre es <span className="highlight">Sebas</span>. Soy un Programador Junior emergente y en busca de oportunidades que me ayuden a crecer tanto laboralmente y también como persona, acá puedes encontrar un poco de mis proyectos, habilidades, etc.
+                            Mi nombre es <span className="highlight">Sebas</span>. Soy un Programador Junior emergente y en busca de oportunidades que me ayuden a crecer tanto profesionalmente como personalmente. Este portafolio, desarrollado en React, tiene como objetivo darte una visión más completa sobre mí y mis proyectos. Aquí podrás conocer más sobre mi experiencia, habilidades y algunos de los proyectos en los que he estado involucrado.
                         </p>
                         <Button className="learn-more-button custom-button" onClick={handleShow}>
                             Leer más
@@ -65,9 +71,13 @@ export const About = () => {
                 onHide={handleClose}
                 centered
                 aria-labelledby="example-modal-sizes-title-lg"
+                onClick={handleBackdropClick}
             >
                 <Modal.Body className='modal-body'>
                     <div className="modal-custom-content">
+                        <Button variant="link" className="modal-close-button" onClick={handleClose}>
+                            <FaTimes size={20} />
+                        </Button>
                         <div className="modal-left">
                             <img src={yo} alt="Sebastian Abad" className="modal-image" />
                             <center>
@@ -88,7 +98,7 @@ export const About = () => {
                         <div className="modal-right">
                             <h3 className='margin-bottom'><span className="highlight">Sobre</span> mí</h3>
                             <p>
-                                Hola! Mi nombre es <span className="highlight">Denis Sebastian Abad Santos</span> pero me gusta que me digan<span className="highlight"> Sebas</span>. Tengo 18 años y soy estudiante de programación, dedicado en lo que hago. Estoy buscando oportunidades que me ayuden a crecer profesionalmente y como persona.
+                                ¡Hola! Mi nombre es <span className="highlight">Denis Sebastian Abad Santos</span>, pero prefiero que me llamen<span className="highlight"> Sebas</span>. Nací el 14 de Julio de 2006 tengo 18 años y actualmente soy estudiante de informática en Kinal. Me considero una persona dedicada y apasionada por lo que hago, siempre en busca de oportunidades que me permitan crecer tanto profesionalmente como personalmente.
                             </p>
                             <h3><span className="highlight">Conocimientos</span> en</h3>
                             <div className="knowledge-container">

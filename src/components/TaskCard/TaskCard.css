@@ -57,6 +57,12 @@
 
 .color-text {
   color: white;
+  font-size: 1.8vh;
+}
+
+.skills {
+  color: #eb4a4c;
+  font-size: 2.25vh;
 }
 
 .modal-overlay {
@@ -109,8 +115,13 @@ body * {
   box-sizing: inherit;
 }
 
-p,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
+  color: #eb4a4c;
   margin: 0;
   padding: 0;
 }
@@ -196,7 +207,7 @@ body,
 .card-heading {
   text-align: center;
   font-weight: bold;
-  font-size: 2.25rem;
+  font-size: 1.5rem;
 }
 
 .styled-link {

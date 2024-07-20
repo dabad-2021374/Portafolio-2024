@@ -27,12 +27,12 @@ export const TaskCard = ({ titulo, descripcion, habilidades, link, imagenUrl }) 
           </div>
         </div>
         <div className="px-2">
-          <h1 className="ff-serif font-weight-normal card-heading mt-0 mb-1 color-text" style={{ lineHeight: '1.25', color: '#eb4a4c' }}>{titulo}</h1>
-          <p className="mb-1 color-text">{descripcion}</p>
+          <h1 className="card-heading mt-2 mb-2">{titulo}</h1>
+          <p className="mb-3 color-text">{descripcion}</p>
           <strong>
-            <p className="mb-1 color-text">Habilidades aprendidas:</p>
+            <p className="mb-1 skills">Tecnologías usadas:</p>
           </strong>
-          <p className="mb-1 color-text" >{habilidades}</p>
+          <p className="mb-3 color-text" >{habilidades}</p>
         </div>
       </div>
       <a href={link} className="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">Descargar</a>
