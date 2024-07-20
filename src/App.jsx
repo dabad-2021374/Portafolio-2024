@@ -37,10 +37,7 @@ function App() {
 
   return (
     <div>
-      <video id="background-video" autoPlay loop muted>
-        <source src="../../public/fondoAnimado.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <div className="background-black"></div>
       <Router />
     </div>
   );
