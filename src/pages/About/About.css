@@ -382,7 +382,8 @@ ul li {
 
 @media (max-width: 768px) {
     .modal-custom-content {
-        margin-top: 8vh;
+        margin-top: auto;
+        margin-bottom: auto;
         margin-left: auto;
         margin-right: auto;
         justify-content: center;
