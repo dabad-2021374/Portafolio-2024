@@ -405,8 +405,9 @@ ul li {
     }
 
     .modal-left img {
-        width: 10%;
-    }
+        width: 50%;
+        height: auto;
+        margin: 0 auto;    }
 
     .modal-right {
         overflow-y: visible;
