@@ -1,6 +1,7 @@
 import Router from './Router';
-import React, { useEffect } from 'react';
+import React, { useEffect, video } from 'react';
 import './App.css'
+import videoAni from '../public/fondoAnimado.mp4'
 
 function App() {
 
@@ -37,7 +38,10 @@ function App() {
 
   return (
     <div>
-      <div className="background-black"></div>
+      <video id="background-video" autoPlay loop muted>
+        <source src="../../public/fondoAnimado.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <Router />
     </div>
   );
